@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задачник — Все задачи</title>
+  <link rel="shortcut icon" href="media/slonik.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="media/slonik.svg" alt="Задачник" class="logo-icon">
+      <span>Задачник</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Сегодня</a>
+      <a href="zadachi.html" class="nav-link active">Все задачи</a>
+      <a href="kalendare.html" class="nav-link">Календарь</a>
+    </nav>
+    <nav class="nav">
+      <a href="settings.html" class="nav-link">Настройки</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2 class="page-title">Все задачи</h2>
+    <form class="add-form" id="allForm">
+      <input class="add-input" type="text" id="allTitle" placeholder="Что нужно сделать?">
+      <select class="add-select" id="allPriority">
+        <option value="low">Низкий</option>
+        <option value="med" selected>Средний</option>
+        <option value="high">Высокий</option>
+      </select>
+      <button class="add-btn" type="submit">Добавить</button>
+    </form>
+    <input class="add-input search" type="text" id="search" placeholder="Поиск задач...">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="active">Активные</button>
+      <button class="filter-btn" data-filter="done">Готовые</button>
+      <button class="filter-btn" data-filter="today">Сегодня</button>
+      <button class="filter-btn" data-filter="overdue">Просрочено</button>
+    </div>
+    <div id="allList"></div>
+  </main>
+  <script src="scriptik.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задачник — Календарь</title>
+  <link rel="shortcut icon" href="media/slonik.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="media/slonik.svg" alt="Задачник" class="logo-icon">
+      <span>Задачник</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Сегодня</a>
+      <a href="zadachi.html" class="nav-link">Все задачи</a>
+      <a href="kalendare.html" class="nav-link active">Календарь</a>
+    </nav>
+    <nav class="nav">
+      <a href="settings.html" class="nav-link">Настройки</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2 class="page-title">Календарь</h2>
+    <div class="calendar-layout">
+      <div class="calendar-box">
+        <div class="cal-top">
+          <button class="btn" id="prevBtn">‹</button>
+          <b id="monthName"></b>
+          <button class="btn" id="nextBtn">›</button>
+        </div>
+        <div class="weekdays">
+          <div>Пн</div>
+          <div>Вт</div>
+          <div>Ср</div>
+          <div>Чт</div>
+          <div>Пт</div>
+          <div>Сб</div>
+          <div>Вс</div>
+        </div>
+        <div class="days" id="days"></div>
+      </div>
+      <div class="day-box">
+        <h3 id="dayTitle">Задачи</h3>
+        <br>
+        <form class="add-form" id="calForm">
+          <input class="add-input" type="text" id="calTitle" placeholder="Новая задача">
+          <button class="add-btn" type="submit">+</button>
+        </form>
+        <div id="dayList"></div>
+      </div>
+    </div>
+  </main>
+  <script src="scriptik.js"></script>
+</body>
+</html>

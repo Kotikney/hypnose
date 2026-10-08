@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задачник</title>
+  <link rel="shortcut icon" href="media/slonik.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+        <img src="media/slonik.svg" alt="Задачник" class="logo-icon">
+        <span>Задачник</span>
+    </div>
+    <nav class="nav">
+      <a href="#" class="nav-link active">Сегодня</a>
+      <a href="zadachi.html" class="nav-link">Все задачи</a>
+      <a href="kalendare.html" class="nav-link">Календарь</a>
+    </nav>
+    <nav class="nav">
+      <a href="settings.html" class="nav-link">Настройки</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title" id="hello">Доброй ночи!</h1>
+      <div class="hero-progress">
+        <div class="hero-percent" id="percent">0%</div>
+        <div class="hero-label">Прогресс дня</div>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-number green" id="done">0</div>
+        <div class="stat-label">Выполнено</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number red" id="left">0</div>
+        <div class="stat-label">Осталось</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" id="total">0</div>
+        <div class="stat-label">Всего</div>
+      </div>
+      <div class="stat">
+        <a class="stat-link" href="https://youtu.be/j-iheFkstFQ?si=cpzFbVvmhVDDzRWm">
+          <div class="stat-number">67</div>
+          <div class="stat-label">не кликать</div>
+        </a>
+      </div>
+    </section>
+    <form class="add-form" id="addForm">
+      <input class="add-input" type="text" id="title" placeholder="Что нужно сделать?">
+      <select class="add-select" id="priority">
+        <option value="low">Низкий</option>
+        <option value="med" selected>Средний</option>
+        <option value="high">Высокий</option>
+      </select>
+      <input class="add-date" type="date" id="date">
+      <button class="add-btn" type="submit">Добавить</button>
+    </form>
+    <div id="todayList"></div>
+  </main>
+  <script src="scriptik.js"></script>
+</body>
+</html>
